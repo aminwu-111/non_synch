@@ -12,10 +12,13 @@ This repository contains MATLAB code for replicating the results in the paper "B
     
     Greek_cell.m: Applies MLPMMH for estimating the drift coefficient of the SLV model of to the Greek cell phone company share data (data included in the repository)(Figure 3 right).
     
-    ARcomparison.m: comparing acceptance rates of 0.07 (Sherlock et al) and 0.23 for PMCMC (Figure 4),.
+    ARcomparison.m: Comparing acceptance rates of 0.07 (Sherlock et al) and 0.23 for PMCMC (Figure 4).
 
+    DB_PMCMC.m and EM_PMCMC.m: These scripts compare two PMCMC approaches for parameter inference for the OU process.
+        EM_PMCMC.m implements the naive Euler-driven PMCMC method with discretization level 4.
+        DB_PMCMC.m implements the proposed diffusion bridge-driven PMCMC method with discretization level 4.
+    Both scripts evaluate and compare the methods in terms of posterior accuracy and computational cost.
 
-the code'DB_PMCMC.m' and 'EM_PMCMC.m' are used to compare the naive Euler-driven pMCMC approach (with a relatively coarse discretisation) to the proposed diffusion bridge-driven pMCMC approach, both in terms of posterior accuracy and computational cost
 
 For the rates of the OU process, I run the code on ibex. code 'pmmhOU_11.m' uses the data 'X.txt', repeat the code for different levels(maybe 9-12) each with 64 runs and then calculate the mean over each level and then plots the rates. Similar for the 'mlpmmhOU_17'.
 
