@@ -14,12 +14,11 @@ This repository contains MATLAB code for replicating the results in the paper "B
     
     ARcomparison.m: Comparing acceptance rates of 0.07 (Sherlock et al) and 0.23 for PMCMC (Figure 4).
 
-    DB_PMCMC.m and EM_PMCMC.m: These scripts compare two PMCMC approaches for parameter inference for the OU process.
-        EM_PMCMC.m implements the naive Euler-driven PMCMC method with discretization level 4.
+    DB_PMCMC.m and EM_pmcmc.m: These scripts compare two PMCMC approaches for parameter inference for the OU process.
+        EM_pmcmc.m implements the naive Euler-driven PMCMC method with discretization level 4.
         DB_PMCMC.m implements the proposed diffusion bridge-driven PMCMC method with discretization level 4.
     Both scripts evaluate and compare the methods in terms of posterior accuracy and computational cost.
 
+For the rates of the OU process, run the code 'mlpmmhOU_111' with data 'X.txt' on ibex(super computer in KAUST) for different levels (maybe 7-10) each with 64 runs and then calculate the mean at each level and then calculate the rates for mlpmmh. (Table 1)
 
-For the rates of the OU process, I run the code on ibex. code 'pmmhOU_11.m' uses the data 'X.txt', repeat the code for different levels(maybe 9-12) each with 64 runs and then calculate the mean over each level and then plots the rates. Similar for the 'mlpmmhOU_17'.
-
-For the rates of the slv process, I run the code on ibex. code 'pmmhOU_l5.m' uses the data 'X-1.txt', repeat the code for different levels(maybe 8-11) each with 64 runs and then calculate the mean over each level and then plots the rates. Similar for the 'mlpmmhOU_17'.
+For the rates of the SLV process, run the code 'pmmh_l5.m' with the dataset X-1.txt (named X.txt within the code, but distinguished here for clarity) on ibex for different levels(maybe 8-11) each with 64 runs and then calculate the mean at each level and then calculate the rates for pmmh. Similar using the 'mlpmmh_l5' for mlpmmh rates.(Table 2)
