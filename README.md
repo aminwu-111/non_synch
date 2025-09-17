@@ -1,18 +1,19 @@
 # non_synch
 
-the code for the paper Bayesian Inference for Non-Synchronously Observed Diffusions 
+This repository contains MATLAB code for replicating the results in the paper "Bayesian Inference for Non-Synchronously Observed Diffusions."
 
-the code 'pf_comp.m' is the code used to compare the likelihood for the particle filter.
+    pf_comp.m: Compares the likelihood estimates produced by the particle filter.
+    
+    Drift_OU.m: Implements MLP-MMH for estimating the drift coefficient of the Ornstein-Uhlenbeck (OU) process using the X_18.mat dataset.
+    
+    OU_SIG.m: Implements MLP-MMH for estimating the diffusion coefficient of the OU process, also using X_18.mat.
+    
+    zebra_beest.m: Runs MLP-MMH for the beest-zebra dataset, using data from beest_zebra.xlsx.
+    
+    Greek_cell.m: Applies MLP-MMH to the Greek cell phone company share data (data included in the repository).
+    
+    ARcomparison.m: Generates Figure 4, comparing acceptance rates of 0.07 and 0.23.
 
-the code 'Drift_OU.m' is the mlpmmh for the drift coefficient of the OU pporcess using 'X_18.mat' data
-
-the code "OU_SIG.m' is the mlpmmh for the diffusion coefficient of the OU pporcess using 'X_18.mat' data
-
-the code 'zebra_beest.m' is the mlpmmh for the beest zebra data using the 'beest_zebra.xlsx' data
-
-the code 'Greek_cell.m' is for the mlpmmh for the Greek cell phone company share data; the data is inside 
-
-the code'ARcomparison.m' is used to generate the Figure 4, for different acceptance rate 07 vs 23
 
 the code'DB_PMCMC.m' and 'EM_PMCMC.m' are used to compare the naive Euler-driven pMCMC approach (with a relatively coarse discretisation) to the proposed diffusion bridge-driven pMCMC approach, both in terms of posterior accuracy and computational cost
 
