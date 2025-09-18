@@ -6,7 +6,7 @@ This repository contains MATLAB code for replicating the results in the paper "B
     
     Drift_OU.m: Implements MLPMMH for estimating the drift coefficient of the Ornstein-Uhlenbeck (OU) process using the X_18.mat dataset (Figure 2 left) .
     
-    OU_SIG.m: Implements MLPMMH for estimating the diffusion coefficient of the OU process, also using X_18.mat(Figure 2 right).
+    OU_SIG.m: Implements MLPMMH for estimating the diffusion coefficient of the OU process, requires loading the data file X_18.mat(Figure 2 right).
     
     zebra_beest.m: Runs MLPMMH for estimating the drift coefficient of the SLV model of the beest-zebra dataset, using data from beest_zebra.xlsx (Figure 3 left).
     
